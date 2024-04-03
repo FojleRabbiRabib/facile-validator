@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <title>Facile Validator - Demo</title>
+    <meta name="description" content="Laravel-inspired validation for HTML forms, built for simplicity of use" />
+    <script type="module" crossorigin src="https://upjs.github.io/facile-validator/assets/index-dgovZs9c.js"></script>
+    <link rel="stylesheet" crossorigin href="https://upjs.github.io/facile-validator/assets/index-q8yB2voL.css">
+  </head>
+
+  <body class="font-roboto min-h-screen w-full flex flex-col bg-gray-100 select-none">
+    <main class="w-full flex-auto flex flex-col items-center justify-center px-3 sm:px-12 py-8">
+      <form
+        action=""
+        class="bg-white px-4 py-4 rounded-lg w-full max-w-sm mt-8 flex flex-col border border-px border-gray-100"
+      >
+        <div class="form-control">
+          <label for="email" class="label">Zipcode</label>
+          <input class="input" placeholder="xxxxx-xxxxx" type="text" data-rules="nullable|x-regex:zipcode" />
+        </div>
+        <div class="form-control mt-4">
+          <label for="email" class="label"> Email </label>
+          <input
+            name="email"
+            id="email"
+            class="input"
+            placeholder="Enter your email address"
+            type="text"
+            data-rules="required-if:password|nullable|email"
+          />
+        </div>
+
+        <div class="form-control mt-4">
+          <label for="age" class="label">
+            Age
+            <small class="text-slate-600">(Between 3-100)</small>
+          </label>
+          <input
+            name="age"
+            id="age"
+            class="input"
+            placeholder="Enter your age"
+            type="text"
+            data-rules="nullable|number|between:3,100"
+          />
+        </div>
+
+        <div class="form-control mt-4">
+          <label for="national_code" class="label">
+            National code
+            <small class="text-slate-600">(10 Digits)</small>
+          </label>
+          <input
+            id="national_code"
+            placeholder="Enter your national code"
+            class="input"
+            type="text"
+            data-rules="required|digits:10"
+          />
+        </div>
+
+        <div class="form-control mt-4">
+          <label for="password" class="label"> Password </label>
+          <input
+            id="password"
+            placeholder="Enter your password"
+            class="input"
+            type="password"
+            data-rules="required|string|x-regex:password"
+          />
+          <small class="ml-2 mt-1 text-gray-500">
+            • 8 Characters minimum
+            <br />
+            • At least one uppercase letter
+            <br />
+            • At least one lowercase letter
+            <br />
+            • At least one special character (e.g. @, #, $, %, &, *, etc.)
+          </small>
+        </div>
+
+        <div class="mt-4">
+          <label class="label-not-inner" for="must-be-accepted">
+            <span>Please check me</span>
+          </label>
+          <input class="pt-2" id="must-be-accepted" type="checkbox" data-rules="accepted" />
+        </div>
+
+        <div class="form-control mt-4">
+          <label for="names" class="label">Choose only 1, 3 or both</label>
+          <select class="input" id="names" name="names[]" data-rules="required|array|in:1,3" multiple>
+            <option class="hidden">Select a value</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <div class="w-full flex justify-between items-center mt-6">
+          <a href="https://github.com/upjs/facile-validator" class="text-base text-amber-500 animate animate-pulse">
+            ⭐️ Star on Github
+          </a>
+          <button
+            class="bg-primary transition-all hover:bg-primary/80 text-white rounded px-6 py-1.5 shadow-lg shadow-primary/50"
+          >
+            Validate
+          </button>
+        </div>
+      </form>
+      <p class="text-base text-gray-500 mt-6">
+        Designed by
+        <a href="https://github.com/realmrhex" target="_blank" class="text-blue-600">Hex</a>
+        with ❤️ and ☕️
+      </p>
+    </main>
+
+    <footer class="flex items-center justify-center py-4 px-3 space-x-1 sm:space-x-3 text-xs sm:text-base">
+      <a
+        href="https://github.com/upjs/facile-validator"
+        target="_blank"
+        title="Github"
+        class="hover:text-primary transition-all"
+        >Github</a
+      >
+      <span class="text-gray-400">•</span>
+      <a
+        href="https://github.com/upjs/facile-validator/blob/main/README.md"
+        target="_blank"
+        class="hover:text-primary transition-all"
+        >Documentation [EN]</a
+      >
+      <span class="text-gray-400">•</span>
+      <a
+        href="https://ditty.ir/posts/facile-html-form-validator/5V9bJ"
+        target="_blank"
+        class="hover:text-primary transition-all"
+        >Documentation [FA]</a
+      >
+      <span class="text-gray-400">•</span>
+      <a
+        href="https://www.npmjs.com/package/@upjs/facile-validator"
+        title="NPM JS"
+        target="_blank"
+        class="hover:text-primary transition-all"
+        >npm</a
+      >
+    </footer>
+
+  </body>
+</html>
