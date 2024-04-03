@@ -1,12 +1,12 @@
 {
-  "name": "@upjs/facile-validator",
-  "version": "1.13.1",
+  "name": "@fojlerabbirabib/facile-validator",
+  "version": "1.13.2",
   "description": "Easy HTML form validator written in TypeScript with tree-shaking",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/upjs/facile-validator.git"
+    "url": "git+https://github.com/fojlerabbirabib/facile-validator.git"
   },
-  "homepage": "https://github.com/upjs/facile-validator",
+  "homepage": "https://github.com/fojlerabbirabib/facile-validator",
   "license": "MIT",
   "scripts": {
     "dev": "vite --config ./playground/vite.config.ts",
@@ -76,7 +76,7 @@
     "vitest": "^0.34.6"
   },
   "bugs": {
-    "url": "https://github.com/upjs/facile-validator/issues"
+    "url": "https://github.com/fojlerabbirabib/facile-validator/issues"
   },
   "directories": {
     "test": "tests"
