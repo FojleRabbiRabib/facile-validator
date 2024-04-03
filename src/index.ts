@@ -1,5 +1,6 @@
 export { default as Validator } from '@/facile-validator';
 export {
+  ar as arLang,
   en as enLang,
   fa as faLang,
   fr as frLang,

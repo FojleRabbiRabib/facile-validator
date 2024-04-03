@@ -19,6 +19,7 @@ export interface ValidatorOptions {
   lang?: Lang;
   on?: Partial<Events>;
   renderErrors?: boolean;
+  renderSuccess?: boolean;
   xRules?: XRules;
   onFieldChangeValidation?: boolean;
   onFieldChangeValidationDelay?: number;
@@ -42,6 +43,7 @@ export interface Events {
   'validation:success': (container: HTMLElement) => void;
   'validation:failed': (container: HTMLElement) => void;
   'field:error': (container: HTMLElement, element: FormInputElement, errors: ErrorDetail[]) => void;
+  'field:success': (container: HTMLElement, element: FormInputElement) => void;
 }
 
 export type EventsName = keyof Events;

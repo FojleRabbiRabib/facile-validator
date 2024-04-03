@@ -1,7 +1,7 @@
 import * as rules from '@/types/rules';
 import { LangKeys } from '@/types';
 
-const enLang: Record<LangKeys, string> = {
+const arLang: Record<LangKeys, string> = {
   [rules.ACCEPTED]: 'يرجى قبول هذا الحقل',
   [rules.ALPHA]: 'يرجى إدخال الأحرف الأبجدية فقط',
   [rules.ALPHA_NUM]: 'يرجى إدخال الأحرف الأبجدية والأرقام فقط',
@@ -26,4 +26,4 @@ const enLang: Record<LangKeys, string> = {
   [rules.WITHIN]: 'القيمة غير صحيحة',
 };
 
-export default enLang;
+export default arLang;

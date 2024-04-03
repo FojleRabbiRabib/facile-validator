@@ -57,5 +57,8 @@ const v = new Validator(form, {
     'field:error': () => {
       console.log('field:error');
     },
+    'field:success': () => {
+      console.log('field:success');
+    },
   },
 });

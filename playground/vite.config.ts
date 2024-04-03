@@ -11,7 +11,7 @@ export default defineConfig({
       '~': resolve(__dirname, './'),
     },
   },
-  base: 'https://upjs.github.io/facile-validator/',
+  base: 'https://FojleRabbiRabib.github.io/facile-validator/',
   plugins: [
     Unocss({
       presets: [presetWind()],
