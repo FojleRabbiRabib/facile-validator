@@ -112,8 +112,6 @@ class Validator {
                 if (shouldStopOnFirstFailure) {
                   break;
                 }
-              } else if (this.options.renderSuccess) {
-                this.events.call('field:success', this.container, field);
               }
             } catch (error) {
               console.error(new Error(`${ruleName}: ${(error as Error).message}`));
@@ -149,6 +147,10 @@ class Validator {
     });
   }
 
+  private triggerFieldSuccessEvent(element: FormInputElement) {
+    this.events.call('field:success', this.container, element);
+  }
+
   private validateOnFieldChange() {
     let timeout: number;
     this.container.addEventListener('input', (event: Event) => {
@@ -162,6 +164,8 @@ class Validator {
           const result = this.validate([target], false);
           if (result === false) {
             this.triggerFieldErrorEvent();
+          } else {
+            this.triggerFieldSuccessEvent(target);
           }
         }
       }, delay);
